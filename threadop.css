@@ -1,0 +1,637 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.rightthread h4::selection,
+.navm a::selection {
+  color: var(--o-color);
+  background: var(--b-color);
+}
+
+:root {
+  --o-color: rgb(253, 150, 31);
+  --b-color: #282e5a;
+}
+
+.searchbox input::placeholder,
+.searchbox input,
+.queans h5,
+.queans p {
+  color: var(--o-color);
+}
+.wnav,
+.loginanimate a {
+  background-color: var(--o-color);
+}
+.loginanimate a p,
+.navm a,
+.navr i,
+.loginanimate a {
+  color: var(--b-color);
+}
+.navl h3 a,
+.navr form .searchbox {
+  background-color: var(--b-color);
+}
+body {
+  background-color: #ffec8f;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+/*///////////////////////////////// nav starting //////////////////////////////*/
+
+.wnav {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    128deg,
+    rgb(255, 123, 0) 0%,
+    rgba(253, 150, 31, 1) 70%,
+    rgb(255, 123, 0) 100%
+  );
+  display: flex;
+  justify-content: center;
+}
+.navbar {
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*/ //////////////////////////////// left nav //////////////////////////////*/
+.navl {
+  width: 20%;
+}
+.navl h3 a {
+  padding: 6px 10px;
+  border-radius: 5px 20px 0px 20px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.navl h3 a:hover {
+  border-radius: 20px 5px 20px 0;
+  color: #fd961f;
+}
+
+/*///////////////////////////////// middle nav //////////////////////////////*/
+.navm {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.navm a {
+  color: #11052c;
+  text-decoration: none;
+  padding: 5px 8px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.navm a:after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #11052c;
+  margin: auto;
+  transition: 0.5s;
+  display: block;
+}
+.navm a:hover::after {
+  width: 100%;
+}
+.navm .navdrop a {
+  margin-right: 0;
+}
+.navm .navdrop {
+  display: flex;
+  align-items: center;
+}
+
+/*/ //////////////////////////////// right nav //////////////////////////////*/
+.navr {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 40%;
+}
+.navr input {
+  padding: 5px;
+  background: none;
+  outline: none;
+  border: none;
+  width: 180px;
+}
+.navr form .searchbox {
+  border-radius: 50px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+.navr i {
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: #ffb657;
+  cursor: pointer;
+}
+.navr i:hover {
+  color: white;
+  font-size: 12px;
+  padding: 6px;
+}
+
+/*///////////////////////////////// search bar //////////////////////////////*/
+.loginanimate a {
+  display: flex;
+  position: relative;
+  text-decoration: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  margin-right: 0;
+  overflow: hidden;
+  transition: 0.2s;
+  border: 2px solid rgb(255, 81, 0);
+}
+.loginanimate a span {
+  position: absolute;
+  display: block;
+}
+.loginanimate a span:nth-of-type(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #282e5a);
+}
+.loginanimate a:hover span:nth-of-type(1) {
+  left: 100%;
+  transition: 1s;
+}
+.loginanimate a span:nth-of-type(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #282e5a);
+}
+.loginanimate a:hover span:nth-of-type(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.loginanimate a span:nth-of-type(2) {
+  top: -100%;
+  right: 0%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #282e5a);
+}
+.loginanimate a:hover span:nth-of-type(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+.loginanimate a span:nth-of-type(4) {
+  bottom: -100%;
+  left: 0%;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #282e5a);
+}
+.loginanimate a:hover span:nth-of-type(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+.loginanimate a:hover {
+  box-shadow: 0 0 2px #282e5a, 0 0 10px #282e5a, 0 0 20px #282e5a;
+  transition-delay: 1s;
+}
+
+/*/ //////////////////////////////// alert start //////////////////////////////*/
+.alertsuccess {
+  height: 100%;
+  width: 100%;
+  background-color: var(--b-color);
+  color: var(--o-color);
+  padding: 5px 5px 5px 10px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.alertsuccess i {
+  padding: 2px 4px;
+  border-radius: 50%;
+  color: var(--b-color);
+  background-color: var(--o-color);
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/*///////////////////////////////// full thread //////////////////////////////*/
+.fullthread {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-left: 2.5%;
+  margin-top: 10px;
+}
+
+/*/ //////////////////////////////// left tags //////////////////////////////*/
+.lefttags {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #282e5a;
+  padding: 0 0;
+  border-radius: 5px;
+}
+.lefttags h4 {
+  color: #282e5a;
+  background: #fd961f;
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px 5px 0 0;
+}
+.tagbottom {
+  display: flex;
+  flex-direction: column;
+}
+.tagbottom a {
+  color: #fd961f;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.tagbottom a:before {
+  content: "";
+  width: 3px;
+  height: 20px;
+  background: #282e5a;
+  position: absolute;
+  left: 0;
+}
+.tagbottom a:after {
+  content: "";
+  width: 3px;
+  height: 20px;
+  background: var(--b-color);
+  position: absolute;
+  right: 0;
+}
+.tagbottom a:hover {
+  background-color: var(--o-color);
+  color: var(--b-color);
+}
+
+/*///////////////////////////////// mid queans //////////////////////////////*/
+.userheadrelate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.leftuser {
+  display: flex;
+  padding: 0px 10px 0 0;
+  align-items: center;
+}
+.leftuser i {
+  background: var(--b-color);
+  border-radius: 50%;
+  padding: 6px 7px;
+  color: var(--o-color);
+  margin-top: 3px;
+}
+.userhcomment {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--b-color);
+  margin-left: 5px;
+}
+.timehcomment {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--b-color);
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+.midques {
+  width: 61%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.midques .que {
+  color: var(--o-color);
+  padding: 10px;
+  border-radius: 5px;
+  background: var(--b-color);
+  position: relative;
+}
+.midques .que h1 {
+  color: var(--o-color);
+  position: relative;
+  font-size: 26px;
+  font-weight: 500;
+}
+.midques .que h1::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: var(--o-color);
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+.midques .que .askbutton {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  font-size: 15px;
+  border-radius: 3px;
+  padding: 3px 5px;
+  outline: none;
+  border: none;
+  color: var(--b-color);
+  background-color: #ffec8f;
+  cursor: pointer;
+}
+.midques .que .threaddesc {
+  position: relative;
+}
+.midques .que .threaddesc a button {
+  padding: 2px 4px;
+  background-color: var(--b-color);
+  border: 1px solid var(--o-color);
+  border-radius: 2px;
+  outline: none;
+  color: var(--o-color);
+  cursor: pointer;
+  margin-left: 5px;
+}
+.que .threaddesc i {
+  position: relative;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+.que .threaddesc i:hover {
+  opacity: 1;
+}
+.midques .que .threaddesc i p {
+  position: absolute;
+  left: 10px;
+  padding: 10px;
+  width: 170px;
+  background: var(--o-color);
+  color: var(--b-color);
+  border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: 0.5s;
+  top: -40px;
+}
+.que .threaddesc i p::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: -5px;
+  position: absolute;
+  background: var(--o-color);
+  transform: translateX(50px);
+  transform: rotate(45deg);
+}
+.que .threaddesc i:hover > p {
+  transform: translateX(0px);
+  visibility: visible;
+  opacity: 1;
+}
+.midques .que p {
+  margin-top: 30px;
+  margin-left: 15px;
+  border-radius: 3px;
+  background-color: #ffec8f;
+  color: var(--b-color);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.midques .que i {
+  top: 15px;
+  position: absolute;
+  font-size: 12px;
+}
+.midques .que .sharelink {
+  color: var(--o-color);
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.smainmodule {
+  position: relative;
+}
+.midques .que .sharemodule {
+  height: 95px;
+  width: 275px;
+  background-color: #ffec8f;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px var(--b-color);
+  z-index: 1;
+  position: absolute;
+  left: 20px;
+  top: 9px;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+.midques .que .sharemodule::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffec8f;
+  transform: rotate(45deg);
+}
+.sharemodule .sharebox {
+  position: absolute;
+}
+.sharemodule .sharebox h4 {
+  color: var(--b-color);
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.sharemodule .sharebox i {
+  position: absolute;
+  font-size: 13px;
+  padding: 3px 5px;
+  border-radius: 50%;
+  right: 0;
+  top: -5px;
+  color: var(--b-color);
+}
+.sharemodule .searchbox .inputcopy {
+  display: flex;
+}
+.sharemodule .sharebox .inputcopy .shareinput {
+  box-shadow: 1px 1px 10px var(--b-color);
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  padding: 5px;
+  width: 100%;
+  font-size: 12px;
+  color: var(--b-color);
+  text-decoration: none;
+}
+.sharebox .inputcopy button {
+  padding: 5px;
+  background-color: var(--b-color);
+  color: var(--o-color);
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  border-radius: 3px;
+}
+.midques .comment {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  display: flex;
+  position: relative;
+}
+.comment .usericon i {
+  border-radius: 50%;
+  padding: 6px 7px;
+  background: var(--b-color);
+  color: var(--o-color);
+  margin-top: 3px;
+}
+.midques .comment .maincomment {
+  border-radius: 5px;
+  background: var(--b-color);
+  padding: 7px 10px 7px 10px;
+  color: var(--o-color);
+  width: 100%;
+  margin-left: 5px;
+  margin-top: 32px;
+}
+.comment .maincomment p {
+  line-height: 22px;
+}
+.midques .commenthead {
+  padding-left: 7px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.userrelate {
+  position: relative;
+}
+.timecomment {
+  top: 10px;
+  position: absolute;
+  right: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--b-color);
+}
+.usercomment {
+  top: 12px;
+  position: absolute;
+  left: 35px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--b-color);
+}
+.notcomment {
+  background-color: var(--b-color);
+  color: var(--o-color);
+  padding: 5px 5px 10px 10px;
+  border-radius: 3px;
+}
+.notcomment h2 {
+  margin-bottom: 5px;
+}
+.commentform {
+  border-radius: 5px;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--b-color);
+  color: var(--o-color);
+}
+.commentform form textarea {
+  max-width: 100%;
+  max-height: 100px;
+  min-width: 100%;
+  min-height: 100px;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  background-color: #ffec8f;
+  padding: 5px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+.commentform button {
+  padding: 8px 5px;
+  margin-top: 7px;
+  background-color: var(--o-color);
+  color: var(--b-color);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  width: 130px;
+}
+
+/*/ //////////////////////////////// right thread //////////////////////////////*/
+.rightthread {
+  width: 21%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #282e5a;
+  border-radius: 5px;
+}
+.rightthread .queans a {
+  text-decoration: none;
+}
+.rightthread .queans p {
+  position: relative;
+  margin-bottom: 10px;
+}
+.rightthread h4 {
+  color: #282e5a;
+  background: #fd961f;
+  font-size: 18px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px 5px 0 0;
+}
+.rightthread .queans {
+  padding: 10px;
+}
